@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  orchestrator-db:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: orc
+      POSTGRES_USER: orc
+      POSTGRES_PASSWORD: 1
+    ports:
+      - "5434:5432"
+    volumes:
+      - orchestrator_data:/var/lib/postgresql/data
+
+  client-db:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: client
+      POSTGRES_USER: client
+      POSTGRES_PASSWORD: 1
+    ports:
+      - "5433:5432"
+    volumes:
+      - client_data:/var/lib/postgresql/data
+
+volumes:
+  orchestrator_data:
+  client_data:
