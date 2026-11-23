@@ -1,0 +1,13 @@
+# Build output
+target/
+
+# IDE (IntelliJ)
+.idea/
+*.iml
+
+# OS / editor
+.DS_Store
+.vscode/
+
+# Local secrets
+.env

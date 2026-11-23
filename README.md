@@ -91,7 +91,7 @@ public interface OrchestratorClient {
 
 ```bash
 # Start Orchestrator
-cd orchestrator
+cd agentorch
 mvn spring-boot:run
 
 # Start Client
